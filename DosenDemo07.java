@@ -26,12 +26,11 @@ public class DosenDemo07 {
             System.out.println("-------------------------");
         }
 
-        for (Dosen07 d : arrayOfDosen) {
-            System.out.println("Kode          : " + d.kode);
-            System.out.println("Nama          : " + d.nama);
-            System.out.println("Jenis Kelamin : " + (d.jenisKelamin ? "Pria" : "Wanita"));
-            System.out.println("Usia          : " + d.usia);
-            System.out.println("-------------------------");
-        }
+        DataDosen07 data = new DataDosen07();
+        data.dataSemuaDosen(arrayOfDosen);
+        data.jumlahDosenPerJenisKelamin(arrayOfDosen);
+        data.rerataUsiaDosenPerJenisKelamin(arrayOfDosen);
+        data.infoDosenPalingTua(arrayOfDosen);
+        data.infoDosenPalingMuda(arrayOfDosen);
     }
 }
