@@ -4,12 +4,17 @@ public class MatakuliahDemo07 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        Matakuliah07[] arrayOfMatakuliah = new Matakuliah07[3];
+
+        System.out.print("Masukkan jumlah matakuliah: ");
+        int jumlah = sc.nextInt();
+        sc.nextLine();
+
+        Matakuliah07[] arrayOfMatakuliah = new Matakuliah07[jumlah];
 
         String kode, nama, dummy;
         int sks, jumlahJam;
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < jumlah; i++) {
             System.out.println("Masukkan Data Matakuliah ke-" + (i + 1));
 
             System.out.print("Kode        : ");
@@ -31,7 +36,7 @@ public class MatakuliahDemo07 {
             arrayOfMatakuliah[i] = new Matakuliah07(kode, nama, sks, jumlahJam);
         }
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < jumlah; i++) {
             System.out.println("Data Matakuliah ke-" + (i + 1));
             System.out.println("Kode        : " + arrayOfMatakuliah[i].kode);
             System.out.println("Nama        : " + arrayOfMatakuliah[i].nama);
